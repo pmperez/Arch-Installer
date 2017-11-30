@@ -2,11 +2,11 @@
 read -p "ENTER to continue "
 
 ##必要设置
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Argentina/Buenos_Aires /etc/localtime
 hwclock --systohc --utc
-echo zh_CN.UTF-8 UTF-8 > /etc/locale.gen
+echo es_ES.UTF-8 UTF-8 > /etc/locale.gen
 locale-gen
-echo LANG=zh_CN.UTF-8 > /etc/locale.conf
+echo LANG=es_ES.UTF-8 > /etc/locale.conf
 read -p "Input your hostname:  " HOSTNAME
 echo $HOSTNAME  > /etc/hostname
 echo Change your root passwd

@@ -39,9 +39,9 @@ then fdisk -l
     swapon $SWAP
 fi
 ##更改软件源
-echo "## China
-Server = http://mirrors.163.com/archlinux/\$repo/os/\$arch
-Server = http://mirrors.ustc.edu.cn/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
+#echo "## China
+#Server = http://mirrors.163.com/archlinux/\$repo/os/\$arch
+#Server = http://mirrors.ustc.edu.cn/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 read -p "Edit the pacman.conf ? (y or Enter  " TMP
 if [ "$TMP" == y ]
 then
@@ -56,7 +56,7 @@ do
     read -p "Successfully installed ? (n or Enter  " TMP
 done
 ##进入已安装的系统
-wget https://raw.githubusercontent.com/YangMame/Arch-Installer/master/config.sh
+wget https://raw.githubusercontent.com/pmperez/Arch-Installer/master/config.sh
 mv config.sh /mnt/root/config.sh
 chmod +x /mnt/root/config.sh
 arch-chroot /mnt /root/config.sh
